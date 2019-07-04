@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:if="${city}">
+    <h1 th:text="${city}"></h1>
+    <h1 th:text="${date}"></h1>
+
+</div>
+<form id="locale" action="worldclock" method="get">
+    <select name="city" onchange="document.getElementById('locale').submit()">
+        <option value="Asia/Ho_Chi_Minh">Select a city</option>
+        <option value="Asia/Ho_Chi_Minh" selected><p th:text="${city}"></p></option>
+        <option value="Asia/Singapore">Singapore</option>
+        <option value="Asia/Hong_Kong">Hong Kong</option>
+        <option value="Asia/Tokyo">Tokyo</option>
+        <option value="Asia/Seoul">Seoul</option>
+        <option value="Europe/London">London</option>
+        <option value="Europe/Madrid">Madrid</option>
+        <option value="America/New_York">New York</option>
+        <option value="Australia/Sydney">Sydney</option>
+        <option value="Argentina/Buenos_Aires">Buenos Aires</option>
+    </select>
+</form>
+</body>
+</html>
